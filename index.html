@@ -10,16 +10,41 @@
 <body>
     <div class="container">
         <div class="header">
-            <img class="logo-ctrl" src="./img/Ellipse 13.png" alt="logo">
+            <img class="logo" src="./img/Ellipse 13.png" alt="logo">
             <div class="titulo">Controle financeiro</div>
             <nav class="menu">    
-                <label class="cadastro">Cadastro de transações</label>
+                <a href="#">Cadastro de transações</a>
                 |
-                <label class="limpar">Limpar dados</label>
+                <a href="#">Limpar dados</a>
                 |
-                <label class="salvar">Salvar no servidor</label>
+                <a href="#">Salvar no servidor</a>
             </nav>
         </div>
+        <section id="secao">
+            <form method="GET" action="">
+                <p class="tituloTransacao">Nova transação</p>
+                <div id="formulario">
+                    <label class="nomeCampo">Tipo de transação</label>
+                    
+                    <select name="transaction-type" id="transaction-type" required>
+                        <option value="">-- Selecione --</option>
+                        <option value="compra">Compra</option>
+                        <option value="venda">Venda</option>
+                    </select>
+                    
+                    <label for="nomemercadoria" class="nomeCampo">Nome da mercadoria</label>
+                    <input id="nomeItem" type="text" name="product-name" placeholder="Input" required>
+                     <label for="valor" class="nomeCampo">Valor</label>
+                    <input type="number" id="precoProd" placeholder="R$ 0,00" required>
+                    <button type="submit" id="btnAdicionar">Adicionar transação</button>
+                </div>
+            </form>
+        </section>
+
+
+
+
+
         <div class="footer"></div>
     </div>
 </body>
