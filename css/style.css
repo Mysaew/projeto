@@ -160,3 +160,54 @@ select, #nomeItem, #precoProd {
     color: var(--back);
     font-weight: bold;
 }
+
+.extrato {
+    width: 100%;
+}
+
+table {
+    position:absolute;
+    top: 150px;
+    right: 120px;
+    margin: 0;
+    width: 100%;
+}
+
+table, th, td {
+    border-bottom: 1px solid #979797;
+    border-collapse: collapse;
+    height: 40px;
+    width: 50%;
+    text-align: left;
+}
+
+th {
+    height: 70px;
+}
+
+.tabelaExtrato {
+    font-size: 1.125em;
+    font-weight: bold;
+    text-align: center;
+    width: 50%;
+    position: fixed;
+    top: 120px;
+    
+}
+
+.align-end {
+    text-align: end;
+}
+
+.align-center {
+    text-align: center;
+    width: 10px;
+} 
+
+tbody .border-double {
+    border-bottom-style: double;
+}
+
+tfoot tr {
+    border-bottom: hidden;
+}
