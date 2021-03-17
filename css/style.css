@@ -1,0 +1,51 @@
+
+.container .header{
+    background: #E0E0E0;
+    display: flex;
+    justify-content:space-between;
+    padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.container .footer{
+    background: #333333;
+    height: 8px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.container .header .titulo{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    /* justify-content: left; */
+    align-items: center;
+
+    color: #333333;
+
+}
+
+.container .header .menu{
+    width: 440px;
+    height: 40px;
+    right: 20px;
+    top: 20px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    font-family: Lato;
+    font-size: 16px;
+    line-height: 19;
+    
+
+
+}
