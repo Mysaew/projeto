@@ -2,6 +2,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle Financeiro</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -9,32 +10,44 @@
 
 <body>
     <div class="container">
-        <div class="header">
+        <header>
             <img class="logo" src="./img/Ellipse 13.png" alt="logo">
             <div class="titulo">Controle financeiro</div>
-            <nav class="menu">    
+            <img class="imgmenu" src="./img/hamburger-menu.svg">
+            <nav class="menu">
                 <a href="#">Cadastro de transações</a>
-                |
+                <span class="pipeline">|</span>
                 <a href="#">Limpar dados</a>
-                |
+                <span class="pipeline">|</span>
                 <a href="#">Salvar no servidor</a>
             </nav>
-        </div>
+            <nav class="hamburgmenu">
+                <ul>
+                    <li>X</li>
+
+                    <li>Cadastro de transações</li>
+
+                    <li>Limpar dados</li>
+
+                    <li>Salvar no servidor</li>
+                </ul>
+            </nav>
+        </header>
         <section id="secao">
             <form method="GET" action="">
                 <p class="tituloTransacao">Nova transação</p>
                 <div id="formulario">
                     <label class="nomeCampo">Tipo de transação</label>
-                    
+
                     <select name="transaction-type" id="transaction-type" required>
                         <option value="">-- Selecione --</option>
                         <option value="compra">Compra</option>
                         <option value="venda">Venda</option>
                     </select>
-                    
+
                     <label for="nomemercadoria" class="nomeCampo">Nome da mercadoria</label>
                     <input id="nomeItem" type="text" name="product-name" placeholder="Input" required>
-                     <label for="valor" class="nomeCampo">Valor</label>
+                    <label for="valor" class="nomeCampo">Valor</label>
                     <input type="number" id="precoProd" placeholder="R$ 0,00" required>
                     <button type="submit" id="btnAdicionar">Adicionar transação</button>
                 </div>
@@ -70,19 +83,17 @@
                         <tr>
                             <td class="centralizar"></td>
                             <td><b>TOTAL</b></td>
-                            <td class="align-end" id="final-result"><b>R$12.909,99</b><p id="final-status" class="align-end">(LUCRO)</p></td>
+                            <td class="align-end" id="final-result"><b>R$12.909,99</b>
+                                <p id="final-status" class="align-end">(LUCRO)</p>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>
             </div>
         </section>
-
-
-
-
-
-        <div class="footer"></div>
+        
     </div>
+    <div class="footer"></div>
 </body>
 
 </html>
