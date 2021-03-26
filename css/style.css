@@ -59,26 +59,21 @@ nav a:hover {
     font-weight: bold;
 }
 /* icone haburguer */
-.hamburgmenu ul{
+#hamburg-menu{
     display: none;
-    position: fixed;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 75%;
-    background-color: #333333;
-    color: #FFFFFF;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    /* background-color: #333333; */
 }
 /* imagen do icone hamburguer */
 .imgmenu{
-    width: 18px;
     background: #E0E0E0;
     display: none;
-    padding: 5px;
+    
 }
+
+div{
+    display: block;
+}
+
 /* container seção para o formulario e a tabela extrato */
 #secao {
     display: flex;
@@ -97,7 +92,7 @@ form {
     flex-flow: column wrap;
     justify-content: space-around;
     width: 100%;
-    height: 400px;
+    /* height: 400px; */
     border: 1px solid #979797;
     border-radius: 4px;
     margin-top: 30px; 
@@ -206,8 +201,8 @@ th {
 }
 
 .centraliza-texto {
-    text-align: center;
     width: 10px;
+    text-align: center;
     padding: 8px 0px;
 } 
 
@@ -221,9 +216,144 @@ tfoot tr {
 /* rodapé da pagina */
 .footer{
     background: #333333;
-    height: 8px;
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    height: 30px;
     width: 100%;
+    bottom: 0;
+    top: 99%;
 
+}
+
+/* VISAO PORTRAIT */
+@media only screen and (max-width: 768px) {
+    header {
+        width: 90%;
+    }
+    .menu {
+    display: none;
+    }
+    .itens-header{
+        width: 97%;
+    }
+    .titulo {
+        width: 100%;
+        text-align: center;
+    }
+    .imgmenu {
+        display: initial;
+        cursor: pointer;
+    }
+    #hamburg-menu {
+        display: none;
+        width: 35%;
+        height: 100%;
+        background-color: #333333;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    .nav-hamburguer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 50px;
+    }
+    .nav-hamburguer a,
+    #btn-close-menu {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    .nav-hamburguer a {
+        padding: 10px 20px;
+        transition: background-color 0.4s;
+    }
+    a {
+        width: 100%;
+        text-align: right;
+    }
+    .nav-hamburguer a:hover {
+        background-color: #979797;
+        color: #333333;
+        cursor: pointer;
+    }
+    #btn-close-menu {
+        font-weight: bold;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 1.1em;
+        cursor: pointer;
+    }
+    #secao {
+        width: 90%;
+        flex-direction: column;
+    }
+    .formulario {
+        width: 100%;
+    }
+    form {
+        flex-flow: row wrap;
+    }
+    .tituloTransacao {
+        width: 100%;
+        margin-bottom: 30px;
+        height: fit-content;
+        top: 20px;
+    }
+    .containerform {
+        height: fit-content;
+        padding: 0;
+    }
+    #option-select {
+        width: 20%;
+        margin-left: 0.5vw;
+    }
+    #desc-item {
+        width: 50%;
+    }
+    #valor-item {
+        width: 20%;
+        margin-right: 0.5vw;
+        margin-bottom: 15px;
+    }
+    #btnAdicionar {
+        width: 150%;
+        align-self: flex-end;
+    }
+    .extrato {
+        width: 100%;
+    }
+    table {
+        width: 100%;
+    }
+}
+
+/* VISUALIZACAO MOBILE */
+@media only screen and (max-width: 600px) {
+    .tituloTransacao {
+        display: none;
+    }
+    #hamburg-menu {
+        width: 75%;
+    }
+    form {
+        flex-flow: column wrap;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-radius: 0;
+    }
+    #option-select {
+        margin: 0;
+    }
+    #option-select, #desc-item, #valor-item, #btnAdicionar {
+        width: 100%;
+    }
+    .containerform {
+        margin-bottom: 20px;
+    }
+    .extrato {
+        margin-top: 35px;
+    }
 }
